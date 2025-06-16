@@ -13,7 +13,7 @@ def post_restaurant_pizza():
     if not (1<=price<=30):
         return { "errors": ["Price must be between 1 and 30"] },400
     r=db.session.query(Restaurant).filter(Restaurant.id==restaurant_id).first()
-    p= db.session.query(Pizza).filter(Pizza.id=pizza_id).first()
+    p= db.session.query(Pizza).filter(Pizza.id==pizza_id).first()
 
     rp=RestaurantPizza(price=price,pizza_id=pizza_id,restaurant_id=restaurant_id)
     db.session.add(rp)

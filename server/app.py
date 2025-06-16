@@ -15,4 +15,4 @@ migrate.init_app(app, db)
 from .models.restaurant import Restaurant
 from .models.pizza import Pizza
 from .models.restaurant_pizza import RestaurantPizza
-from .controllers import restaurant_controller,pizza_controller
+from .controllers import restaurant_controller,pizza_controller,restaurant_pizza_controller
